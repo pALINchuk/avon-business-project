@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/avon-business-project/static/css/main.fa27b5a8.css",
+    "main.js": "/avon-business-project/static/js/main.64ccc135.js",
+    "static/media/last-block-img.png": "/avon-business-project/static/media/last-block-img.1fabfee8d59c1d994610.png",
+    "static/media/first-block-img.png": "/avon-business-project/static/media/first-block-img.1be1f85e9e3132d1d7e1.png",
+    "static/media/home-background.png": "/avon-business-project/static/media/home-background.8b0174adcffca79fc73f.png",
+    "static/media/prize-whole.svg": "/avon-business-project/static/media/prize-whole.b783d9f1e3a3539ea8b7cde3d10c035d.svg",
+    "static/media/actions-whole.svg": "/avon-business-project/static/media/actions-whole.a9a4f49b4d885780e8cf15502ed524d4.svg",
+    "static/media/conditions-whole.svg": "/avon-business-project/static/media/conditions-whole.57388f39a1825fa82775dd37f92d186a.svg",
+    "static/media/logo-avon.svg": "/avon-business-project/static/media/logo-avon.fe4aa2c7b056c4ad4900eb787eb9595b.svg",
+    "static/media/arrow-down-icon.svg": "/avon-business-project/static/media/arrow-down-icon.496aefff502dcc2106b56540144e0e7b.svg",
+    "static/media/24-hours.svg": "/avon-business-project/static/media/24-hours.a671049b40e3b780b7f2b1d95a8c47cc.svg",
+    "static/media/people-icon.svg": "/avon-business-project/static/media/people-icon.6e55d082edadc15a44412189d87913c4.svg",
+    "static/media/development.svg": "/avon-business-project/static/media/development.68811ce9422236b119341edc00ebb1b7.svg",
+    "static/media/instagram-icon.svg": "/avon-business-project/static/media/instagram-icon.a4ef0045625f490675536c80da31297a.svg",
+    "static/media/gift.svg": "/avon-business-project/static/media/gift.7a7a71910effc70c4edc3fe1c499a4bc.svg",
+    "static/media/phone-icon.svg": "/avon-business-project/static/media/phone-icon.d5bf62cf21541b07ccedef1b413b32ef.svg",
+    "static/media/telegram-icon.svg": "/avon-business-project/static/media/telegram-icon.e973427d3e37f1caf774dfdbdb0d69ac.svg",
+    "static/media/bag.svg": "/avon-business-project/static/media/bag.665fa8d0883873a089cc813f5a665a15.svg",
+    "index.html": "/avon-business-project/index.html",
+    "static/media/facebook-icon.svg": "/avon-business-project/static/media/facebook-icon.9a8e17f289672e478a0ff2c8f5e3daec.svg",
+    "static/media/line.svg": "/avon-business-project/static/media/line.196e364b2d21c79fc6482186d7a6f9a4.svg",
+    "main.fa27b5a8.css.map": "/avon-business-project/static/css/main.fa27b5a8.css.map",
+    "main.64ccc135.js.map": "/avon-business-project/static/js/main.64ccc135.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa27b5a8.css",
+    "static/js/main.64ccc135.js"
+  ]
+}
