@@ -1,0 +1,143 @@
+header{
+    background-color: #3C3937;
+    color: #F5F5F5;
+}
+
+.navbar-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 90px;
+
+    width: 85vw;
+    max-width: 1900px;
+    margin: 0 auto;
+
+    /*padding: 1rem 0;*/
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 90px;
+
+    width: 85vw;
+    max-width: 1900px;
+    margin: 0 auto;
+    /*position: sticky;*/
+    /*top: 0;*/
+    /*z-index: 1;*/
+    /*left: 0;*/
+    /*right: 0;*/
+}
+
+.nav-logo-container{
+    display: flex;
+}
+
+.nav-logo{
+    height: 4rem;
+}
+
+.navbar-links-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 35px;
+    font-size: 24px;
+    flex: 1;
+}
+
+.navbar-links-container a{
+    color: #F5F5F5;
+    text-decoration: none;
+    /*margin: 0 5px;*/
+    transition: .3s ease-in-out;
+}
+
+.navbar-links-container a:hover{
+    color: #F26A8D;
+}
+
+.navbar-links-phone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navbar-links-phone img{
+    height: 45px;
+    margin-right: 10px;
+}
+
+.nav-btn{
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #F26A8D;
+    /*visibility: hidden;*/
+    /*opacity: 0;*/
+    display: none;
+
+    font-size: 2.8rem;
+}
+
+/*.responsive-nav{*/
+/*    flex-direction: column;*/
+/*}*/
+
+@media only screen and (max-width: 1200px) {
+    .navbar-links-container{
+        gap: 12px;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .nav-logo{
+        height: 3rem;
+    }
+
+    .nav-btn{
+        /*visibility: visible;*/
+        /*opacity: 1;*/
+        display: flex;
+    }
+
+    .navbar-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        transition: 1s;
+        transform: translateY(-100vh);
+        background-color: #3C3937;
+    }
+
+    .navbar-links-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.3rem;
+        gap: 25px;
+    }
+
+    .responsive-nav{
+        transform: none;
+    }
+
+    .nav-close-btn{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+}

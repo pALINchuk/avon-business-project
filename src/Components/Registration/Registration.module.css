@@ -1,0 +1,115 @@
+.registration-wrapper{
+
+}
+
+.registration-container{
+    /*min-height: 100vh;*/
+    min-height: auto;
+    width: 85vw;
+    max-width: 1900px;
+    margin: 0 auto;
+    color: #14213D;
+
+    margin-bottom: 3rem;
+}
+
+.registration-container h1{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 2.3rem;
+    margin-bottom: 3rem;
+}
+
+.registration-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%;
+
+}
+
+.registration-inputs{
+    /*padding-left: 10rem;*/
+    font-size: 1.2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1.8rem;
+}
+
+.registration-inputs input{
+    width: 30rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    padding: 0.8rem 0;
+
+    flex-grow: 1;
+
+    border: 1.2px solid #3C3937;
+    box-shadow: 3px 3px 3px rgba(147, 143, 141, 0.75);
+}
+
+.registration-btn{
+    align-self: flex-start;
+    background-color: #F26A8D;
+    color: #F5F5F5;
+    border: none;
+    border-radius: 10rem;
+    padding: 0.8rem 3.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.registration-btn:hover{
+    background-color: #cb3b59;
+    color: rgba(245, 245, 245, 0.83);
+}
+
+.registration-btn:active{
+    background-color: #9d213f;
+    color: rgba(201, 201, 201, 0.7);
+}
+
+.registration-block img{
+    width: 25rem;
+}
+
+@media only screen and (max-width: 1350px) {
+    .registration-block img{
+        width: 23rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .registration-block{
+        flex-direction: column;
+    }
+
+    .registration-block img{
+        width: 20rem;
+        order: -1;
+        margin-bottom: 3rem;
+    }
+
+    .registration-inputs{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .registration-btn{
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .registration-inputs input{
+        width: 25rem;
+        height: 2.5rem;
+    }
+}
