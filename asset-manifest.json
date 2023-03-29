@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/avon-business-project/static/css/main.eb833db9.css",
-    "main.js": "/avon-business-project/static/js/main.64ccc135.js",
+    "main.js": "/avon-business-project/static/js/main.fe45dfe5.js",
     "static/media/last-block-img.png": "/avon-business-project/static/media/last-block-img.1fabfee8d59c1d994610.png",
     "static/media/first-block-img.png": "/avon-business-project/static/media/first-block-img.1be1f85e9e3132d1d7e1.png",
     "static/media/home-background.png": "/avon-business-project/static/media/home-background.8b0174adcffca79fc73f.png",
@@ -22,10 +22,10 @@
     "static/media/facebook-icon.svg": "/avon-business-project/static/media/facebook-icon.9a8e17f289672e478a0ff2c8f5e3daec.svg",
     "static/media/line.svg": "/avon-business-project/static/media/line.196e364b2d21c79fc6482186d7a6f9a4.svg",
     "main.eb833db9.css.map": "/avon-business-project/static/css/main.eb833db9.css.map",
-    "main.64ccc135.js.map": "/avon-business-project/static/js/main.64ccc135.js.map"
+    "main.fe45dfe5.js.map": "/avon-business-project/static/js/main.fe45dfe5.js.map"
   },
   "entrypoints": [
     "static/css/main.eb833db9.css",
-    "static/js/main.64ccc135.js"
+    "static/js/main.fe45dfe5.js"
   ]
 }
