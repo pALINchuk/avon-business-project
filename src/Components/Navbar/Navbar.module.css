@@ -123,6 +123,7 @@ header{
         transform: translateY(-100%);
         background-color: #3C3937;
         /*align-self: flex-start;*/
+        z-index: 1;
     }
 
     .navbar-links-container{
