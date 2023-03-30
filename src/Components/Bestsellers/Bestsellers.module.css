@@ -67,7 +67,6 @@
     /*align-items: stretch;*/
     /*justify-content: space-between;*/
     /*align-content: space-between;*/
-
 }
 
 .bestsellers__griditem {
@@ -83,8 +82,27 @@
 
 .bestsellers__product_img {
     height: 18rem;
+    margin-bottom: 1rem;
 }
 
 .bestsellers__stars_img{
     width: 12rem;
+}
+
+@media only screen and (max-width: 1250px) {
+    .bestsellers__gridbox{
+        column-gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .bestsellers__gridbox{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    .bestsellers__gridbox{
+        grid-template-columns: 1fr;
+    }
 }
