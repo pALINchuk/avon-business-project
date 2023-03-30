@@ -1,7 +1,126 @@
 .about-wrapper{
-
+    justify-self: flex-start;
+    height: auto;
 }
 
 .about-container{
+    /*min-height: 100vh;*/
+    min-height: auto;
+    width: 85vw;
+    max-width: 1900px;
+    margin: 0 auto;
+    color: #14213D;
 
+    margin-bottom: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.1rem;
+}
+
+.about-container h1{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 2.3rem;
+    /*margin-bottom: 3rem;*/
+}
+
+.about-container h1 span{
+    text-shadow: 3px 3px 0 rgba(242, 106, 141, 0.74);
+}
+
+.about-container p{
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+    text-align: center;
+}
+
+.about-container button{
+    background-color: #F26A8D;
+    color: #F5F5F5;
+    border: none;
+    border-radius: 10rem;
+    padding: 0.8rem 3.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+    margin-bottom: 3rem;
+}
+
+.about-container button:hover{
+    background-color: #cb3b59;
+    color: rgba(245, 245, 245, 0.83);
+}
+
+.about-container button:active{
+    background-color: #9d213f;
+    color: rgba(201, 201, 201, 0.7);
+}
+
+.about-list{
+    color: #DD2D4A;
+    font-size: 1.2rem;
+    align-self: flex-start;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.about-flexbox{
+    display: flex;
+    flex-direction: column;
+}
+
+.about-flexitem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.about-flexitem:first-child{
+    position: relative;
+}
+
+.about-flexitem p{
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.about-img-block img{
+    height: 25rem;
+}
+
+.about-img-block p{
+    text-align: center;
+}
+
+.about-decoration::after{
+    content: '';
+    width: 25rem;
+    height: 25rem;
+    /*background-color: #f26a8d;*/
+    background: linear-gradient(to bottom, rgba(221, 45, 74, 0.6), rgba(221, 45, 74, 0));
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    top: -3rem;
+    right: -3rem;
+    z-index: -1;
+}
+
+.about-decoration::before{
+    content: '';
+    width: 30rem;
+    height: 30rem;
+    background: linear-gradient(to bottom, rgba(221, 45, 74, 0.3), rgba(221, 45, 74, 0));
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    top: -5.5rem;
+    right: -5.3rem;
+    z-index: -1;
 }
