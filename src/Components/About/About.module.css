@@ -124,3 +124,126 @@
     right: -5.3rem;
     z-index: -1;
 }
+
+@media only screen and (max-width: 1024px) {
+    .about-flexitem{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about-flexitem:nth-child(odd) .about-img-block{
+        order: -1;
+    }
+    .about-flexitem p{
+        font-size: 1rem;
+    }
+    .about-decoration .about-img-block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about-img-block img{
+        height: 23rem;
+    }
+    .about-decoration::after{
+        width: 25rem;
+        height: 25rem;
+        top: -3rem;
+        right: 15rem;
+    }
+    .about-decoration::before{
+        width: 30rem;
+        height: 30rem;
+        top: -5.5rem;
+        right: 14rem;
+    }
+    .about-list{
+        margin-bottom: 3rem;
+    }
+    .about-flexitem{
+        gap: 0rem;
+    }
+    .about-flexbox{
+        gap: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .about-img-block img{
+        height: 20rem;
+    }
+    .about-decoration::after{
+        width: 25rem;
+        height: 25rem;
+        top: -3rem;
+        right: 10rem;
+    }
+    .about-decoration::before{
+        width: 20rem;
+        height: 20rem;
+        top: -1rem;
+        right: 12rem;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .about-list{
+        font-size: 1rem;
+    }
+    .about-decoration::after{
+        width: 20rem;
+        height: 20rem;
+        top: -3rem;
+        right: 8rem;
+    }
+    .about-decoration::before{
+        width: 15rem;
+        height: 15rem;
+        top: -1rem;
+        right: 10rem;
+    }
+    .about-img-block img{
+        height: 14rem;
+    }
+    .about-flexitem p{
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .about-decoration::after{
+        top: -3rem;
+        right: 5rem;
+    }
+    .about-decoration::before{
+        top: -1rem;
+        right: 7rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .about-decoration::after{
+        width: 17rem;
+        height: 17rem;
+        top: -3rem;
+        right: 5rem;
+    }
+    .about-decoration::before{
+        width: 12rem;
+        height: 12rem;
+        top: -1rem;
+        right: 8rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .about-decoration::after{
+        top: -3rem;
+        right: 3rem;
+    }
+    .about-decoration::before{
+        top: -1rem;
+        right: 5rem;
+    }
+}

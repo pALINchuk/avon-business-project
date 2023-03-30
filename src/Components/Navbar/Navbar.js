@@ -12,7 +12,9 @@ const Navbar = () => {
     const navRef = useRef()
 
     const showNavbar = () => {
-        navRef.current.classList.toggle(styles['responsive-nav'])
+        if(navRef.current.offsetWidth < 1024){
+            navRef.current.classList.toggle(styles['responsive-nav'])
+        }
     }
 
     return (
