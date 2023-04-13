@@ -77,7 +77,11 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 20rem;
-    height: 30rem;
+    /*height: 30rem;*/
+}
+
+.bestsellers__pricetag{
+    margin-top: auto;
 }
 
 .bestsellers__product_img {

@@ -20,52 +20,62 @@ const Bestsellers = () => {
         {
             imgProduct: img1,
             imgStars: fourStars,
-            label: 'Туалетна вода Full Speed для Нього, 75 мл'
+            label: 'Туалетна вода Full Speed для Нього, 75 мл',
+            price: 105.00
         },
         {
             imgProduct: img2,
             imgStars: fiveStars,
-            label: 'Оновлювальна сироватка для обличчя «Енергія Протінола», 30 мл\n'
+            label: 'Оновлювальна сироватка для обличчя «Енергія Протінола», 30 мл\n',
+            price: 185.35
         },
         {
             imgProduct: img3,
             imgStars: fourHalfStars,
-            label: 'Парфумна вода Today для Неї, 50 мл'
+            label: 'Парфумна вода Today для Неї, 50 мл',
+            price: 89.99
         },
         {
             imgProduct: img4,
             imgStars: fourStars,
-            label: 'Багатофункціональна туш для вій 5-в-1'
+            label: 'Багатофункціональна туш для вій 5-в-1',
+            price: 105.00
         },
         {
             imgProduct: img5,
             imgStars: fiveStars,
-            label: 'Духи Far Away Beyond для Неї, 50 мл'
+            label: 'Духи Far Away Beyond для Неї, 50 мл',
+            price: 105.00
         },
         {
             imgProduct: img6,
             imgStars: fourHalfStars,
-            label: 'Парфумна вода Incandessence для неї, 50 мл'
+            label: 'Парфумна вода Incandessence для неї, 50 мл',
+            price: 249.99
         },
         {
             imgProduct: img7,
             imgStars: fiveStars,
-            label: 'Парфумований спрей для тіла «Нефритова квітка та шовк» (100 мл)\n'
+            label: 'Парфумований спрей для тіла «Нефритова квітка та шовк» (100 мл)\n',
+            price: 105.00
         }
         ,{
             imgProduct: img8,
             imgStars: twoHalfStars,
-            label: 'Система 2-в-1 для шкіри навколо очей: крем і гель «Сяйво»\n'
+            label: 'Система 2-в-1 для шкіри навколо очей: крем і гель «Сяйво»\n',
+            price: 105.00
         },
         {
             imgProduct: img9,
             imgStars: fiveStars,
-            label: 'Туш для вій «СуперШок». Невагомий об`єм»'
+            label: 'Туш для вій «СуперШок». Невагомий об`єм»',
+            price: 205.50
         },
         {
             imgProduct: img10,
             imgStars: fourStars,
-            label: 'Кремові рум\'яна'
+            label: 'Кремові рум\'яна',
+            price: 49.99
         }
     ]
     return (
@@ -86,6 +96,7 @@ const Bestsellers = () => {
                                     <img className={styles.bestsellers__product_img} src={item.imgProduct} alt='product]'/>
                                     <p>{item.label}</p>
                                     <img className={styles.bestsellers__stars_img} src={item.imgStars} alt='stars'/>
+                                    <div className={styles.bestsellers__pricetag}>{item.price.toFixed(2)}$</div>
                                 </div>
                             )
                         })
