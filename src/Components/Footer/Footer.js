@@ -4,9 +4,27 @@ import logo from '../../Assets/logo-avon.svg'
 import telegramIcon from '../../Assets/telegram-icon.svg'
 import facebookIcon from '../../Assets/facebook-icon.svg'
 import instagramIcon from '../../Assets/instagram-icon.svg'
+import {NavLink} from "react-router-dom";
 
 const Footer = () => {
-    const linkItems = ['Домашня', 'Про нас', 'Почати бізнес', 'Бестселери']
+    const linkItems = [
+        {
+            title: 'Домашня',
+            link: '/'
+        },
+        {
+            title: 'Про нас',
+            link: '/about'
+        },
+        {
+            title: 'Почати бізнес',
+            link: '#'
+        },
+        {
+            title: 'Бестселери',
+            link: '/bestsellers'
+        },
+    ]
     const iconItems = [telegramIcon, facebookIcon, instagramIcon]
     return (
         <div className={styles['footer-wrapper']}>
@@ -17,7 +35,7 @@ const Footer = () => {
                         {
                             linkItems.map((item, index) => {
                                 return (
-                                    <a key={index}>{item}</a>
+                                    <NavLink to={item.link} key={index}>{item.title}</NavLink>
                                 )
                             })
                         }

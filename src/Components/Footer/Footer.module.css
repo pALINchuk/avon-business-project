@@ -39,6 +39,8 @@
 
 .footer-links a{
     transition: .3s ease-in-out;
+    color: #F5F5F5;
+    text-decoration: none;
 }
 
 .footer-links a:hover{
