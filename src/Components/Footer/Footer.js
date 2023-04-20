@@ -1,13 +1,13 @@
 import React from "react";
 import styles from './Footer.module.css'
 import logo from '../../Assets/logo-avon.svg'
-import telegramIcon from '../../Assets/telegram-icon.svg'
+// import telegramIcon from '../../Assets/telegram-icon.svg'
 import facebookIcon from '../../Assets/facebook-icon.svg'
-import instagramIcon from '../../Assets/instagram-icon.svg'
+// import instagramIcon from '../../Assets/instagram-icon.svg'
 
 const Footer = () => {
     const linkItems = ['Домашня', 'Про нас', 'Почати бізнес', 'Бестселери']
-    const iconItems = [telegramIcon, facebookIcon, instagramIcon]
+    const iconItems = [facebookIcon]
     return (
         <div className={styles['footer-wrapper']}>
             <div className={styles['footer-container']}>

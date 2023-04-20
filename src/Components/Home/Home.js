@@ -4,6 +4,21 @@ import arrow from '../../Assets/arrow-down-icon.svg'
 import {motion} from "framer-motion";
 
 const Home = () => {
+    const homePageButtonHandler = () => {
+        fetch('http://localhost:8888/project-avon-api/?name=Alina&team=25', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+            .then(res => res.json())
+            .then(response => {
+                console.log(response)
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
     return (
         <div className={styles['home-wrapper']}>
             {/*<div className={styles['home-container']}>*/}
@@ -51,6 +66,7 @@ const Home = () => {
                             stiffness: 260,
                             damping: 20
                         }}
+                        onClick={homePageButtonHandler}
                     >Приєднатися безкоштовно</motion.button>
                     <motion.img
                         src={arrow} alt='arrow-img'
