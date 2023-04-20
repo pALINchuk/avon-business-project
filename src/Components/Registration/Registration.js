@@ -30,37 +30,37 @@ const Registration = () => {
     })
     const [hasSubmitted, setHasSubmitted] = useState(false);
 
-    const submitButtonHandler = (e) => {
-        e.preventDefault()
-        if (hasSubmitted) {
-            return;
-        }
-        setHasSubmitted(true);
-
-        // let data = new FormData()
-        // data.append('name', formData.name, 'surname', formData.surname, 'email', formData.email, 'phone', formData.phone)
-        fetch('http://localhost:8888/project-avon-api/', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-            // body: data
-        })
-            .then(response => response.text())
-            .then(data => console.log(data))
-            .catch(error => console.error(error))
-            .finally(() => {
-                setHasSubmitted(false)
-                setFormData({
-                    name: '',
-                    surname: '',
-                    email: '',
-                    phone: ''
-                })
-            })
-        // console.log(formData)
-    }
+    // const submitButtonHandler = (e) => {
+    //     e.preventDefault()
+    //     if (hasSubmitted) {
+    //         return;
+    //     }
+    //     setHasSubmitted(true);
+    //
+    //     // let data = new FormData()
+    //     // data.append('name', formData.name, 'surname', formData.surname, 'email', formData.email, 'phone', formData.phone)
+    //     fetch('http://localhost:8888/project-avon-api/', {
+    //         method: 'POST',
+    //         headers: {
+    //           'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(formData)
+    //         // body: data
+    //     })
+    //         .then(response => response.text())
+    //         .then(data => console.log(data))
+    //         .catch(error => console.error(error))
+    //         .finally(() => {
+    //             setHasSubmitted(false)
+    //             setFormData({
+    //                 name: '',
+    //                 surname: '',
+    //                 email: '',
+    //                 phone: ''
+    //             })
+    //         })
+    //     // console.log(formData)
+    // }
 
     const inputChangeHandler = (e) => {
         setFormData(prevState => {
@@ -109,7 +109,10 @@ const Registration = () => {
                                     )
                                 })
                             }
-                            <button onClick={submitButtonHandler} className={styles['registration-btn']}>Зареєструватися</button>
+                            <button
+                                // onClick={submitButtonHandler}
+                                className={styles['registration-btn']}
+                            >Зареєструватися</button>
                         {/*</form>*/}
                     </div>
                     <img src={registrationImg} alt='registration-img'/>
