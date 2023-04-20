@@ -10,6 +10,7 @@ import Footer from "./Components/Footer/Footer";
 import {HashRouter, Routes, Route} from "react-router-dom"
 import About from "./Components/About/About";
 import Bestsellers from "./Components/Bestsellers/Bestsellers";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
     // const containerRef = useRef(null);
@@ -23,6 +24,7 @@ function App() {
     return (
         <HashRouter>
             <div className="App">
+                <ScrollToTop/>
                 <Navbar/>
                 <Routes>
                     <Route path='/' element={
