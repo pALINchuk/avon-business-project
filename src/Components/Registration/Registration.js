@@ -1,8 +1,10 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import styles from './Registration.module.css'
 import registrationImg from '../../Assets/last-block-img.png'
+import {ScrollContext} from "../../ScrollContext";
+import axios from "axios";
 
-const Registration = () => {
+const Registration = (props) => {
     const items = [
         {
             label: 'Ім’я',
@@ -29,6 +31,8 @@ const Registration = () => {
         phone: ''
     })
     const [hasSubmitted, setHasSubmitted] = useState(false);
+
+    // const targetRef = useContext(ScrollContext)
 
     // const submitButtonHandler = (e) => {
     //     e.preventDefault()
@@ -69,6 +73,25 @@ const Registration = () => {
                 [e.target.name]: e.target.value
             }
         })
+        console.log(formData)
+    }
+
+    const registrationHandler = async (e) => {
+        e.preventDefault(); // Prevent default form submission behavior
+
+        try{
+            const response = await axios.post('http://localhost:8080/api', formData);
+            console.log(response.data); // Handle the response from the server
+            setFormData({
+                name: '',
+                surname: '',
+                email: '',
+                phone: ''
+            });
+        }
+        catch(error){
+            console.error(error)
+        }
     }
 
     return (
@@ -104,7 +127,8 @@ const Registration = () => {
                                                 type='text'
                                                 name={item.htmlFor}
                                                 onChange={inputChangeHandler}
-                                                value={formData[item.htmlFor]}/>
+                                                value={formData[item.htmlFor]}
+                                            />
                                         </div>
                                     )
                                 })
@@ -112,6 +136,7 @@ const Registration = () => {
                             <button
                                 // onClick={submitButtonHandler}
                                 className={styles['registration-btn']}
+                                onClick={registrationHandler}
                             >Зареєструватися</button>
                         {/*</form>*/}
                     </div>

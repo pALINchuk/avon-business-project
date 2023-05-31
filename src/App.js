@@ -11,6 +11,7 @@ import {HashRouter, Routes, Route} from "react-router-dom"
 import About from "./Components/About/About";
 import Bestsellers from "./Components/Bestsellers/Bestsellers";
 import ScrollToTop from "./Components/ScrollToTop";
+import {ScrollContext} from "./ScrollContext";
 
 function App() {
     // const containerRef = useRef(null);
@@ -21,26 +22,39 @@ function App() {
     //     const lastChildHeight = lastChild.offsetHeight;
     //     container.style.paddingBottom = `${lastChildHeight}px`;
     // }, []);
+
+    // const registrationRef = useRef(null);
+    //
+    // useEffect(() => {
+    //     const registrationElement = registrationRef.current;
+    //     const lastChild = registrationElement.lastChild;
+    //     const lastChildHeight = lastChild.offsetHeight;
+    //     registrationElement.style.paddingBottom = `${lastChildHeight}px`;
+    // }, []);
+
     return (
         <HashRouter>
             <div className="App">
-                <ScrollToTop/>
-                <Navbar/>
-                <Routes>
-                    <Route path='/' element={
-                        <>
-                            <Home/>
-                            <FirstBlock/>
-                            <Advantages/>
-                            <Steps/>
-                            <Registration/>
-                        </>
-                    }/>
-                    <Route path='/about' element={<About/>}/>
-                    <Route path='/bestsellers' element={<Bestsellers/>}/>
-                    <Route path='*' element={<h1>Not found!</h1>}/>
-                </Routes>
-                <Footer/>
+                {/*<ScrollContext.Provider value={}>*/}
+                    <ScrollToTop/>
+                    <Navbar/>
+                    <Routes>
+                        <Route path='/' element={
+                            <>
+                                <Home/>
+                                <FirstBlock/>
+                                <Advantages/>
+                                <Steps/>
+                                <Registration/>
+                            </>
+                        }/>
+                        <Route path='/about' element={<About/>}/>
+                        <Route path='/bestsellers' element={<Bestsellers/>}/>
+                        <Route path='/startBusiness' element={<Registration/>}/>
+                        <Route path='*' element={<h1>Not found!</h1>}/>
+                    </Routes>
+                    <Footer/>
+                {/*</ScrollContext.Provider>*/}
             </div>
         </HashRouter>
     );

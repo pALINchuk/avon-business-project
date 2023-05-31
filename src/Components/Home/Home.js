@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
 import styles from './Home.module.css'
 import arrow from '../../Assets/arrow-down-icon.svg'
 import {motion} from "framer-motion";
+import Registration from "../Registration/Registration";
+import {ScrollContext} from "../../ScrollContext";
 
 const Home = () => {
     // const homePageButtonHandler = () => {
@@ -19,6 +21,17 @@ const Home = () => {
     //             console.error(error)
     //         })
     // }
+    const targetRef = useContext(ScrollContext)
+
+    const handleClick = () => {
+        // if (targetRef && targetRef.current) {
+        //     window.scrollTo({
+        //         top: targetRef.current.offsetTop,
+        //         behavior: 'smooth',
+        //     });
+        // }
+    }
+
     return (
         <div className={styles['home-wrapper']}>
             {/*<div className={styles['home-container']}>*/}
@@ -66,6 +79,7 @@ const Home = () => {
                             stiffness: 260,
                             damping: 20
                         }}
+                        onClick={handleClick}
                         // onClick={homePageButtonHandler}
                     >Приєднатися безкоштовно</motion.button>
                     <motion.img

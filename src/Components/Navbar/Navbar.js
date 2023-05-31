@@ -30,7 +30,7 @@ const Navbar = () => {
                 <div className={styles['navbar-container']} ref={navRef}>
                     <div className={styles['navbar-links-container']}>
                         <NavLink to='/about' onClick={showNavbar}>Про нас</NavLink>
-                        <NavLink to='#' onClick={showNavbar}>Почати бізнес</NavLink>
+                        <NavLink to='startBusiness' onClick={showNavbar}>Почати бізнес</NavLink>
                         <NavLink to='/bestsellers' onClick={showNavbar}>Бестселери</NavLink>
                         <div className={styles['navbar-links-phone']}>
                             <img src={phone} alt='phone'/>
