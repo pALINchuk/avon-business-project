@@ -39,19 +39,23 @@ function App() {
                     <ScrollToTop/>
                     <Navbar/>
                     <Routes>
-                        <Route path='/' element={
-                            <>
-                                <Home/>
-                                <FirstBlock/>
-                                <Advantages/>
-                                <Steps/>
-                                <Registration/>
-                            </>
-                        }/>
-                        <Route path='/about' element={<About/>}/>
-                        <Route path='/bestsellers' element={<Bestsellers/>}/>
-                        <Route path='/startBusiness' element={<Registration/>}/>
-                        <Route path='*' element={<h1>Not found!</h1>}/>
+                        <Route
+                            path='/'
+                            element={
+                                <>
+                                    <Home/>
+                                    <FirstBlock/>
+                                    <Advantages/>
+                                    <Steps/>
+                                    <Registration/>
+                                </>
+                            }
+                            activeClassName="active"
+                        />
+                        <Route path='/about' element={<About/>} activeClassName="active"/>
+                        <Route path='/bestsellers' element={<Bestsellers/>} activeClassName="active"/>
+                        <Route path='/startBusiness' element={<Registration/>} activeClassName="active"/>
+                        <Route path='*' element={<h1>Not found!</h1>} activeClassName="active"/>
                     </Routes>
                     <Footer/>
                 {/*</ScrollContext.Provider>*/}

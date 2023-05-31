@@ -14,6 +14,7 @@ import twoHalfStars from '../../Assets/bestsellers/two_half_stars.svg'
 import fourStars from '../../Assets/bestsellers/four_stars.svg'
 import fourHalfStars from '../../Assets/bestsellers/four_half_stars.svg'
 import fiveStars from '../../Assets/bestsellers/five-stars.svg'
+import { useNavigate } from "react-router-dom";
 
 const Bestsellers = () => {
     const items = [
@@ -78,12 +79,20 @@ const Bestsellers = () => {
             price: 49.99
         }
     ]
+
+    let navigate = useNavigate();
+
+    const clickHandler = () => {
+        let path = `/startBusiness`;
+        navigate(path);
+    }
+
     return (
         <div className={styles['bestsellers-wrapper']}>
             <div className={styles['bestsellers-container']}>
                 <h1>Наші бестселери</h1>
                 <p>З цими товарами ваша команда досягне неймовірних продаж!</p>
-                <button>Почати будувати структуру!</button>
+                <button onClick={clickHandler}>Почати будувати структуру!</button>
 
                 <div className={styles.bestsellers__gridbox}>
                     {

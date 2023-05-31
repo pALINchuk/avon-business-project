@@ -4,10 +4,13 @@ import phone from '../../Assets/phone-icon.svg'
 import styles from './Navbar.module.css'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import {NavLink} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 
 const Navbar = () => {
     // const [openedMenu, setOpenedMenu] = useState(false)
+
+    const location = useLocation();
 
     const navRef = useRef()
 
@@ -30,7 +33,7 @@ const Navbar = () => {
                 <div className={styles['navbar-container']} ref={navRef}>
                     <div className={styles['navbar-links-container']}>
                         <NavLink to='/about' onClick={showNavbar}>Про нас</NavLink>
-                        <NavLink to='startBusiness' onClick={showNavbar}>Почати бізнес</NavLink>
+                        <NavLink to='/startBusiness' onClick={showNavbar}>Почати бізнес</NavLink>
                         <NavLink to='/bestsellers' onClick={showNavbar}>Бестселери</NavLink>
                         <div className={styles['navbar-links-phone']}>
                             <img src={phone} alt='phone'/>

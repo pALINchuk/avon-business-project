@@ -4,6 +4,7 @@ import arrow from '../../Assets/arrow-down-icon.svg'
 import {motion} from "framer-motion";
 import Registration from "../Registration/Registration";
 import {ScrollContext} from "../../ScrollContext";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
     // const homePageButtonHandler = () => {
@@ -23,6 +24,8 @@ const Home = () => {
     // }
     const targetRef = useContext(ScrollContext)
 
+    let navigate = useNavigate();
+
     const handleClick = () => {
         // if (targetRef && targetRef.current) {
         //     window.scrollTo({
@@ -30,6 +33,9 @@ const Home = () => {
         //         behavior: 'smooth',
         //     });
         // }
+
+        let path = `/startBusiness`;
+        navigate(path);
     }
 
     return (

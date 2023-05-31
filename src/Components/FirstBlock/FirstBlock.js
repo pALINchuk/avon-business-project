@@ -1,8 +1,16 @@
 import React from "react";
 import styles from "../FirstBlock/FirstBlock.module.css";
 import img from "../../Assets/first-block-img.png"
+import { useNavigate } from "react-router-dom";
 
 const FirstBlock = () => {
+    let navigate = useNavigate();
+
+    const handleClick = () => {
+        let path = `/startBusiness`;
+        navigate(path);
+    }
+
     return (
         <div className={styles['firstblock-wrapper']}>
             <div className={styles['firstblock-container']}>
@@ -20,7 +28,7 @@ const FirstBlock = () => {
             <div className={styles['firstblock-free-bar']}>
                 <h2>І звичайно, це все БЕЗКОШТОВНО!</h2>
                 <p>Саме так, жодних капітальних вкладень, прихованих комісій тощо.</p>
-                <button>Я з вами!</button>
+                <button onClick={handleClick}>Я з вами!</button>
             </div>
         </div>
     )

@@ -33,6 +33,10 @@ body {
     background-color: #F5F5F5;
 }
 
+.active {
+    color: #F26A8D;
+}
+
 /*.App-logo {*/
 /*  height: 40vmin;*/
 /*  pointer-events: none;*/

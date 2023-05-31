@@ -18,7 +18,7 @@ const Footer = () => {
         },
         {
             title: 'Почати бізнес',
-            link: '#'
+            link: '/startBusiness'
         },
         {
             title: 'Бестселери',

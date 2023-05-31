@@ -3,6 +3,7 @@ import styles from './About.module.css'
 import firstImg from '../../Assets/about/first-img.png'
 import secondImg from '../../Assets/about/second-img.png'
 import thirdImg from '../../Assets/about/third-img.png'
+import { useNavigate } from "react-router-dom";
 
 
 const About = () => {
@@ -13,12 +14,20 @@ const About = () => {
         'Кожен 4-й аромат, що продається в україні – AVON',
         'Фонд AVON для жінок – це найбільша корпоративна благодійна організація у світі, яка сфокусована на жіночих проблемах'
     ]
+
+    let navigate = useNavigate();
+
+    const handleClick = () => {
+        let path = `/startBusiness`;
+        navigate(path);
+    }
+
     return (
         <div className={styles['about-wrapper']}>
             <div className={styles['about-container']}>
                 <h1>Історія компанії <span>Avon</span></h1>
                 <p>Шлях від п’яти ароматів парфумів до прибутку в кілька мільярдів доларів!</p>
-                <button>Стати партнером!</button>
+                <button onClick={handleClick}>Стати партнером!</button>
                 <ul className={styles['about-list']}>
                     {
                         items.map((item, index) => {
