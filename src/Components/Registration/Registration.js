@@ -80,7 +80,7 @@ const Registration = (props) => {
         e.preventDefault(); // Prevent default form submission behavior
 
         try{
-            const response = await axios.post('http://localhost:8080/api', formData);
+            const response = await axios.post('http://localhost:8080/api/sendMail', formData);
             console.log(response.data); // Handle the response from the server
             setFormData({
                 name: '',

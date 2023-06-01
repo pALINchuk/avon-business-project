@@ -1,40 +1,43 @@
 const {Sequelize, DataTypes} = require('sequelize')
 const {client} = require("./models");
-const config = require("../config/dbConfig")
-
-const sequelize = new Sequelize(
-    config.db_name,
-    config.db_user,
-    config.db_password,
-    {
-        host: config.db_host,
-        dialect: 'mysql'
-    }
-)
-
-
-sequelize.authenticate()
-    .then(()=>{
-        console.log("database connected")
-    })
-    .catch(err=>{
-        console.log(err)
-    }
-)
 
 
 const db = {}
-db.Sequelize = Sequelize
-db.sequelize = sequelize
+
+const initDB = ()=>{
+    const sequelize = new Sequelize(
+        process.env.DB_NAME,
+        process.env.DB_USER,
+        process.env.DB_PASSWORD,
+        {
+            host: process.env.DB_HOST,
+            dialect: 'mysql'
+        }
+    )
 
 
-db.client = client(db.sequelize, DataTypes)
+    sequelize.authenticate()
+        .then(()=>{
+            console.log("database connected")
+        })
+        .catch(err=>{
+                console.log(err)
+            }
+        )
+
+    db.Sequelize = Sequelize
+    db.sequelize = sequelize
 
 
-db.sequelize.sync({force: false})
-    .then(()=>{
-        console.log("re-sync done")
-    }
-)
+    db.client = client(db.sequelize, DataTypes)
 
-module.exports = {db}
+
+    db.sequelize.sync({force: false})
+        .then(()=>{
+                console.log("re-sync done")
+            }
+        )
+}
+
+
+module.exports = {db, initDB}

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../web-project-avon/.idea/web project avon.iml" filepath="$PROJECT_DIR$/../web-project-avon/.idea/web project avon.iml" />
+      <module fileurl="$PROJECT_DIR$/.idea/web project avon.iml" filepath="$PROJECT_DIR$/.idea/web project avon.iml" />
     </modules>
   </component>
 </project>
