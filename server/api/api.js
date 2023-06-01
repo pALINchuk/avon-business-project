@@ -1,13 +1,14 @@
 const {getTransporter} = require("../utils/mailing");
 const {db} = require("../models");
+const {generateMessage} = require("../utils/generateMessage");
 
 
-const sendMail = async (data)=>{
+const sendMail = async (text)=>{
     return await getTransporter().sendMail({
         from: process.env.GMAIL_USER,
         to: process.env.GMAIL_USER,
         subject: "Form filled",
-        text: JSON.stringify(data)
+        text: text
     })
 }
 
@@ -15,13 +16,14 @@ const sendMail = async (data)=>{
 const postApiSendMail = async ctx =>{
     const data = ctx.request.body
     try{ //sending email here
-        await sendMail(data)
-
-        // console.log(data)
+        const message = generateMessage(data)
+        await sendMail(message)
         ctx.response.status = 200
         ctx.response.message="OK"
     }catch (error){
         console.log(error)
+        ctx.response.status = 500
+        ctx.response.message="SERVER ERROR"
     }
 
     try{ // saving to db here
@@ -36,6 +38,8 @@ const postApiSendMail = async ctx =>{
         ctx.response.message="sent"
     }catch (error){
         console.log(error)
+        ctx.response.status = 500
+        ctx.response.message="SERVER ERROR"
     }
 }
 
